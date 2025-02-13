@@ -17,16 +17,16 @@ body {font-size:16px;}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <a href="#1" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Szabó<br>Levente Máté</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="Bevezető" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bevezető</a> 
-    <a href="11." onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">11.</a> 
-    <a href="12." onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">12.</a> 
-    <a href="13." onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">13.</a> 
-    <a href="Portfólió" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Portfólió</a>
+    <a href="#Bevezető" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bevezető</a> 
+    <a href="#11." onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">11.</a> 
+    <a href="#12." onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">12.</a> 
+    <a href="#13." onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">13.</a> 
+    <a href="#Önreflexió" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Önreflexió</a>
   </div>
 </nav>
 
@@ -44,26 +44,15 @@ body {font-size:16px;}
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Portfólió</b></h1>
+    <h1 id="Bevezető" class="w3-jumbo"><b>Portfólió</b></h1>
     <h1 class="w3-xxxlarge w3-text-black"><b>Bevezető</b></h1>
     <hr style="width:50px;border:5px solid rgb(8, 8, 8)" class="w3-round">
+    <p>
+      
+    </p>
   </div>
   
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
-    </div>
-
-    <div class="w3-half">
-      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
-    </div>
-  </div>
-
+  
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
@@ -75,145 +64,130 @@ body {font-size:16px;}
 
   <!-- Services -->
   <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>11.</b></h1>
+    <h1 id="11." class="w3-xxxlarge w3-text-black"><b>11.</b></h1>
     <hr style="width:50px;border:5px solid rgb(8, 8, 8)" class="w3-round">
     <h2>I.félév</h2>
-    <p>Elektrotechinka</p>
-    <p>A mérés kiértékelé
-      A mérés során NAND kapus megvalósítást diszjunktív alakból határoztunk meg, NOR kapus
-      megvalósítást konjuktív alakból határoztunk meg, mindkettőhöz demorgan azonosítást használtam.
-      NÉV grafikusan ki egyszerűsített alakból határoztuk meg. 
+    <p class="cim">Elektrotechinka</p>
+    <p>Az elektrotechnika tanulmányozása során megismertem az alapvető elektromos fogalmakat, mint az áram, feszültség és ellenállás, valamint az áramkörök működését. 
+      A legnagyobb kihívást a gyakorlati alkalmazások és hibák felismerése jelentette, különösen komplex áramkörök esetén.
     </p>
-    <img src="elektro1.PNG" style="width:30%" onclick="onClick(this)" alt="NOR kapcsolás">
-    <img src="elektro2.PNG" style="width:30%" onclick="onClick(this)" alt="NAND kapcsolás">
-    <img src="elektro3.PNG" style="width:30%" onclick="onClick(this)" alt="NÉV kapcsolás">
-    <h2>II.félév</h2>
-    <p>Mikrovezérlő programozás</p>
-    <p>Hogyan működik?  
-    Ultrahangos érzékelő működése: Az HC-SR04 érzékelő két részből áll: egy adóból, amely ultrahangos impulzusokat bocsát ki, és egy vevőből, amely érzékeli a visszavert jelet. 
-    A mért idő alapján az Arduino kiszámítja a távolságot az érzékelő és az akadály között.  
-    Távolság számítása: A távolságot az alábbi képlettel számítjuk ki:  
-    Távolság=Idő (visszaverődésig)2×Hangsebesség\text{Távolság} = \frac{\text{Idő (visszaverődésig)}}{2} \times \text{Hangsebesség}Taˊvolsaˊg=2Ido˝ (visszaverŐdÉsig)×HangsebessÉg  </p>
-    <img src="mikro1.jpg" style="width:30%" onclick="onClick(this)" alt="Tolatóradar">
+    <img src="elektro.PNG" style="width:30%" onclick="onClick(this)" alt="Mérési jegyzőkönyv">
+    <img src="elektro1.PNG" style="width:30%" onclick="onClick(this)" alt="Mérési jegyzőkönyv">
+   
+    <p class="cim">Mikrovezérlő programozás</p>
+    <p>A mikrovezérlő programozás önreflexiója azt jelenti, hogy a programozó értékeli és fejleszti saját munkáját, figyelembe véve a hibák javítását, a kód optimalizálását és a legjobb gyakorlatok alkalmazását. 
+    Célja a folyamatos fejlődés és a hatékonyabb programozás.
+    </p>
+    <img src="mikro1.jpg" style="width:20%" onclick="onClick(this)" alt="Tolatóradar">
     <img src="mikro2.jpg" style="width:30%" onclick="onClick(this)" alt="Tolatóradar">
+
+    <h2>II.félév</h2>
+    <p class="cim">Digitális áramkörök</p>
+    <p>A digitális áramkörök tanulmányozása során mélyebb betekintést nyertem az elektronikai rendszerek működésébe. 
+    A logikai kapuk (AND, OR, NOT) alapvető szerepet játszanak az áramkörök tervezésében, és a szimulációk, gyakorlati építések segítettek abban, hogy a gyakorlatban is alkalmazzam az elméleti tudást.</p>
+    <img src="digit1.PNG" style="width:25%" onclick="onClick(this)" alt="NOR kapcsolás">
+    <img src="digit2.PNG" style="width:25%" onclick="onClick(this)" alt="NAND kapcsolás">
+    <img src="digit3.PNG" style="width:30%" onclick="onClick(this)" alt="NÉV kapcsolás">
+
+    <p class="cim">Programozás alapjai</p>
+    <p>A programozás alapjai tantárgy során sokat fejlődtem a kódolás és problémamegoldás terén. Az alapfogalmak, mint változók, ciklusok és függvények, most már érthetőek számomra. 
+      A hibakeresés és a program struktúrájának megtervezése révén megtanultam, hogy a programozás nemcsak kódolás, hanem alapos tervezés és türelem kérdése is.</p>
+      <img src="proga1.PNG" style="width:30%" onclick="onClick(this)" alt="Program">
+      <img src="proga2.PNG" style="width:27%" onclick="onClick(this)" alt="Program a futtatás közben">
   </div>
+
   
   <!-- Designers -->
   <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>12.</b></h1>
+    <h1 id="12." class="w3-xxxlarge w3-text-black"><b>12.</b></h1>
     <hr style="width:50px;border:5px solid rgb(8, 8, 8)" class="w3-round">
     <h2>I.félév</h2>
-    <p>Adatbáziskezelés</p>
-    <p></p>
+    <p class="cim">Adatbáziskezelés</p>
+    <p>Az adatbázis használata jelentősen megkönnyítette a munkámat az adatok rendszerezésében és kezelésében. 
+      Segített gyorsan és pontosan lekérdezni az információkat, miközben biztosította az adatbiztonságot és integritást. 
+      A táblák közötti kapcsolatok és az indexek alkalmazása növelte a rendszer teljesítményét, így még nagyobb adatmennyiség esetén is hatékony maradt. 
+      Az adatbázis átláthatósága és megbízhatósága jelentősen javította a munkám minőségét. </p>
     <img src="adatb.png" style="width:30%" onclick="onClick(this)" alt="kapcsolatok">
     <img src="adatb1.PNG" style="width:30%" onclick="onClick(this)" alt="table kreálás">
     <img src="adatb2.PNG" style="width:30%" onclick="onClick(this)" alt="adatok feltöltáse a táblákba">
     <img src="adatb3.PNG" style="width:30%" onclick="onClick(this)" alt="adatok feltöltáse a táblákba">
-    <h2>II. félév</h2>
-    <p>Hálózatkezelés</p>
+    
+    <p class="cim">Hálózatkezelés</p>
     <img src="halo.PNG" style="width:30%" onclick="onClick(this)" alt="cisco pactket racer">
-    <p></p>
+    <p>A hálózatok tantárgy során alapvető ismereteket szereztem a hálózati protokollok és eszközök működéséről. 
+      A gyakorlatok segítettek a hálózati konfigurációk és hibakeresés elsajátításában, miközben a kihívások fejlődésre ösztönöztek. 
+      A tantárgy megerősített abban, hogy a hálózati tudás kulcsfontosságú a jövőbeli szakmai pályafutásomhoz. </p>
+    
+    <h2>II. félév</h2>
+    <p class="cim">PLC programozás</p>
+    <p>A PLC programozás tantárgy során megtanultam a vezérlő rendszerek működését és a logikai alapú programozást. 
+      A gyakorlati feladatok segítettek jobban megérteni a relés kapcsolásokat és a vezérlési struktúrák alkalmazását. 
+      Ráébredtem, hogy a PLC programozás precíz tervezést és hibamentes kódot igényel a hatékony automatizálás érdekében.</p>
+
+    <p class="cim">Számítógépes szimuláció</p>
+    <p>A számítógépes szimuláció tantárgy során megtanultam, hogyan modellezhetjük és szimulálhatjuk a valós rendszereket. 
+    A gyakorlati feladatok segítettek megérteni a szimulációk alkalmazását a problémák gyorsabb elemzésében és megoldásában.</p>
+    <img src="szimu1.PNG" style="width:30%" onclick="onClick(this)" alt="tapskapcsoló alap rajz">
+    <img src="szimu2.PNG" style="width:25%" onclick="onClick(this)" alt="tapskapcsoló PCB rajz">
+
+
   </div>
 
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Packages / Pricing Tables -->
   <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>13.</b></h1>
+    <h1 id="13." class="w3-xxxlarge w3-text-black"><b>13.</b></h1>
     <hr style="width:50px;border:5px solid rgb(5, 5, 5)" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+    <h2>I.félév</h2>
+    <p class="cim">Munkavállalói idegen nyelv</p>
+    <p>A munkavállalói idegen nyelv tantárgy során fejlődtem a munkahelyi kommunikációban. 
+      Megtanultam a szakmai kifejezéseket és a nyelv használatát a munkahelyi környezetben, ami segít a nemzetközi kapcsolatok és feladatok hatékony kezelésében.</p>
+      <img src="cv.PNG" style="width:25%" onclick="onClick(this)" alt="Önéletrajz">
+      
+    <p class="cim">IoT</p>
+    <p>Az IoT tantárgy során megértettem, hogyan működnek az okos eszközök és hogyan kapcsolódnak össze a hálózatok, érzékelők és felhőalapú rendszerek. 
+      Sokat tanultam az adatok gyűjtéséről és feldolgozásáról, ami alapot ad az IoT alkalmazások fejlesztéséhez.</p>
+    <img src="IoT1.jpg" style="width:30%" onclick="onClick(this)" alt="Hőmérő">
+    <img src="IoT2.jpg" style="width:25%" onclick="onClick(this)" alt="Hőmérő kód">
+      
+      
+      <h2>II. félév</h2>
+      <p class="cim">Programfejlesztés</p>
+      <p>A programfejlesztés tantárgy során mélyebb megértést nyertem a szoftverfejlesztési folyamatokról, az algoritmusok tervezéséről és az objektumorientált programozásról. 
+        Az elméleti tudás mellett gyakorlati tapasztalatokat szereztem a különböző programozási nyelvek és fejlesztői eszközök használatában. 
+        A tantárgy segített jobban átlátni a szoftverek fejlesztési ciklusát, és fejlesztette a problémamegoldó képességemet. </p>
+        <img src="progf4.PNG" style="width:30%" onclick="onClick(this)" alt="Kód az adatbázisból való összeköttetésről">
+        <img src="progf3.PNG" style="width:30%" onclick="onClick(this)" alt="Adatok amiket felhasználtam az adatbázisból">
+        <img src="progf6.PNG" style="width:30%" onclick="onClick(this)" alt="ListBoxba való kiírás">
+        <img src="progf5.PNG" style="width:30%" onclick="onClick(this)" alt="Button 2 használat eredménye">
+        <img src="progf1.PNG" style="width:30%" onclick="onClick(this)" alt="Program bezárása">
+
+        <p class="cim">Robottechnika CAD/CAM</p>
+        <p>
+          A Robotechnika CAD/CAM tantárgy segített elsajátítani a számítógépes tervezés és gyártás alapjait. 
+          A CAD szoftverek használata során fejlesztettem a tervezési készségeimet, míg a CAM rendszerekkel a gyártási folyamatok megértését gyakoroltam. 
+          A tantárgy erősítette a problémamegoldó képességemet, és hasznos alapot adott a jövőbeli mérnöki munkámhoz. 
+        </p>
+        <img src="kapcsolo üzemü átalakító 1.PNG" style="width:30%" onclick="onClick(this)" alt="kapcsolo üzemü átalakító ">
+
+
+
+
   </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">10 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">20% furniture discount</li>
-        <li class="w3-padding-16">Good deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 199</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">50 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">50% furniture discount</li>
-        <li class="w3-padding-16">GREAT deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 249</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
+
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Önreflexió</b></h1>
+    <h1 id="Önreflexió" class="w3-xxxlarge w3-text-black"><b>Önreflexió</b></h1>
     <hr style="width:50px;border:5px solid rgb(8, 8, 8)" class="w3-round">
-    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
-    </form>  
+    <p>Az Ipari Informatika technikus szakma során szerzett tapasztalataim segítettek abban, 
+      hogy átfogó ismereteket szerezzek az ipari rendszerek automatizálásáról, a PLC programozásról, 
+      valamint a szenzorok és vezérlő rendszerek integrálásáról. 
+      A tantárgyak és gyakorlati feladatok révén fejlesztettem problémamegoldó képességemet, 
+      és megtanultam hatékonyan alkalmazni az informatikai megoldásokat a gyártási környezetekben. 
+      Most már képes vagyok részt venni komplex ipari rendszerek tervezésében és karbantartásában, 
+      miközben tisztában vagyok a modern automatizálás és a számítástechnika szerepével az ipari termelésben.</p>
+     
   </div>
 
 <!-- End page content -->
